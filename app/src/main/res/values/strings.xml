@@ -3,4 +3,37 @@
     <string name="titulo_app">Petagram</string>
     <string name="bienvenida_app">Bienvenido a Petagram</string>
     <string name="boton_bienvenida_app">Accede</string>
+    <string-array name="Nombre">
+        <item name="GatoconBotas">Gato con Botas</item>
+        <item name="Dug">Dug</item>
+        <item name="Remy">Remy</item>
+        <item name="Bolt">Bolt</item>
+        <item name="Slinky">Slinky</item>
+    </string-array>
+    <string-array name="Tipo">
+        <item name="Perro">Perro</item>
+        <item name="Gato">Gato</item>
+        <item name="Roedor">Roedor</item>
+    </string-array>
+    <string-array name="Raza">
+        <item name="Labrador">Labrador</item>
+        <item name="Rata">Rata</item>
+        <item name="Ninguna">Ninguna</item>
+        <item name="Juguete">Juguete con muelle</item>
+        <item name="Pastor">Pastor blanco Suizo o Shiba inu</item>
+    </string-array>
+    <string-array name="Localización">
+        <item name="Cataratas">Cataratas del Paraíso</item>
+        <item name="MuyLejano">Muy, muy Lejano</item>
+        <item name="Paris">Paris</item>
+        <item name="Canada">Canada</item>
+        <item name="Hollywood">Hollywood</item>
+    </string-array>
+    <string-array name="Frase">
+        <item name="FraseDug">Acabo de conocerte y ya te quiero</item>
+        <item name="FraseGato">¿Quién oza importunarme?</item>
+        <item name="FraseBolt">¡Tengo un superladrido!</item>
+        <item name="FraseRata">Juntos podemos convertirnos en el mejor chef de París.</item>
+        <item name="FraseSlinky">Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio</item>
+    </string-array>
 </resources>
