@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:background="@drawable/puppy9"
+        android:background=""
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
@@ -26,7 +26,8 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp" />
+        android:layout_marginTop="61dp"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
