@@ -1,9 +1,9 @@
 package com.laialechma.petagram;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-public class DetallesMascotas extends AppCompatActivity {
+/**
+ * Created by Laia Lechma on 15/05/2016.
+ */
+public class Detalle {
 
     private String nombre;
     private String tipo;
@@ -11,7 +11,7 @@ public class DetallesMascotas extends AppCompatActivity {
     private String localizacion;
     private String frase;
 
-    public DetallesMascotas(String nombre, String tipo, String raza, String localizacion, String frase) {
+    public Detalle(String nombre, String tipo, String raza, String localizacion, String frase) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.raza = raza;
@@ -57,10 +57,5 @@ public class DetallesMascotas extends AppCompatActivity {
 
     public void setFrase(String frase) {
         this.frase = frase;
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalles_mascotas);
     }
 }
