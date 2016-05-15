@@ -10,13 +10,23 @@ public class Detalle {
     private String raza;
     private String localizacion;
     private String frase;
+    private int foto;
 
-    public Detalle(String nombre, String tipo, String raza, String localizacion, String frase) {
+    public Detalle(int foto, String nombre, String tipo, String raza, String localizacion, String frase) {
+        this.foto = foto;
         this.nombre = nombre;
         this.tipo = tipo;
         this.raza = raza;
         this.localizacion = localizacion;
         this.frase = frase;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 
     public String getNombre() {

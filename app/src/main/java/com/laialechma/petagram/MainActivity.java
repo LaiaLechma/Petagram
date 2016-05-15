@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
 
             mascotas = new ArrayList<Detalle>();
-            mascotas.add (new Detalle("Dug", "Perro", "Labrador", "Cataratas del Paraíso", "Acabo de conocerte y ya te quiero"));
-            mascotas.add (new Detalle("Remy", "Roedor", "Rata", "Paris", "Juntos podemos convertirnos en el mejor chef de París"));
-            mascotas.add (new Detalle("Slinky", "Perro", "Juguete", "USA", "Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio"));
-            mascotas.add (new Detalle("Bolt", "Perro", "Pastor blanco Suizo o Shiba inu", "Hollywood", "¡Tengo un superladrido!"));
-            mascotas.add (new Detalle("Gato con Botas", "Gato", "Labrador", "Muy, muy Lejano", "¿Quién oza importunarme?"));
+            mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Perro", "Labrador", "Cataratas del Paraíso", "Acabo de conocerte y ya te quiero"));
+            mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Roedor", "Rata", "Paris", "Juntos podemos convertirnos en el mejor chef de París"));
+            mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Perro", "Juguete", "USA", "Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio"));
+            mascotas.add (new Detalle(R.drawable.perrobolt, "Bolt", "Perro", "Pastor blanco Suizo o Shiba inu", "Hollywood", "¡Tengo un superladrido!"));
+            mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Gato", "Labrador", "Muy, muy Lejano", "¿Quién oza importunarme?"));
 
 
 
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 nombresDetalleMascotas.add(detallesMascotas.getNombre());
             }
 
+        /*
             ListView listMascotas = (ListView) findViewById(R.id.listMascotas);
             listMascotas.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,nombresDetalleMascotas));
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("Frase", mascotas.get(position).getFrase());
                     startActivity(intent);
                 }
-            });
+            });*/
 
     }
 }
