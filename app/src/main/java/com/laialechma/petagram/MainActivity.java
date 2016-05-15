@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(MainActivity.this, DetalleMascota.class);
+                    intent.putExtra("Nombre", mascotas.get(position).getNombre());
+                    intent.putExtra("Tipo", mascotas.get(position).getTipo());
+                    intent.putExtra("Raza", mascotas.get(position).getRaza());
+                    intent.putExtra("Localizacion", mascotas.get(position).getLocalizacion());
+                    intent.putExtra("Frase", mascotas.get(position).getFrase());
                     startActivity(intent);
                 }
             });
