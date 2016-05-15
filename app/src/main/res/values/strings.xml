@@ -26,7 +26,7 @@
         <item name="Cataratas">Cataratas del Paraíso</item>
         <item name="MuyLejano">Muy, muy Lejano</item>
         <item name="Paris">Paris</item>
-        <item name="Canada">Canada</item>
+        <item name="USA">USA</item>
         <item name="Hollywood">Hollywood</item>
     </string-array>
     <string-array name="Frase">
