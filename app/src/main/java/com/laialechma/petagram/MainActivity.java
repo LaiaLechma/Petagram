@@ -45,11 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void inicializarListMascotas(){
         mascotas = new ArrayList<Detalle>();
-        mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Perro", "Labrador", "Cataratas del Paraíso", "Acabo de conocerte y ya te quiero"));
-        mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Roedor", "Rata", "Paris", "Juntos podemos convertirnos en el mejor chef de París"));
-        mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Perro", "Juguete", "USA", "Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio"));
-        mascotas.add (new Detalle(R.drawable.perrobolt, "Bolt", "Perro", "Pastor blanco Suizo o Shiba inu", "Hollywood", "¡Tengo un superladrido!"));
-        mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Gato", "Labrador", "Muy, muy Lejano", "¿Quién oza importunarme?"));
+        mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Tipo: Perro", "Raza: Labrador", "Localización: Cataratas del Paraíso", "Frase favorita: Acabo de conocerte y ya te quiero", 0));
+        mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Tipo: Roedor", "Raza: Rata", "Localización: Paris", "Frase favorita: Juntos podemos convertirnos en el mejor chef de París", 0));
+        mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Tipo: Perro", "Raza: Juguete", "Localización: USA", "Frase favorita: Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio", 0));
+        mascotas.add (new Detalle(R.drawable.perrobolt, "Bolt", "Tipo: Perro", "Raza: Pastor blanco Suizo o Shiba inu", "Localización: Hollywood", "Frase favorita: ¡Tengo un superladrido!", 0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Tipo: Gato", "Raza: Labrador", "Localización: Muy, muy Lejano", "Frase favorita: ¿Quién oza importunarme?", 0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek, "Sven", "Tipo: Reno", "Raza: Reno", "Localización: Arendelle", "Frase favorita: ??",0));
+    }
+    public void iraFavoritos(View v){
+        Intent intent= new Intent(this,ActivityFavoritos.class);
+        startActivity(intent);
     }
 }
 

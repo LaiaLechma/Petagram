@@ -63,5 +63,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             tvLocalizacionCV = (TextView) itemView.findViewById(R.id.tvLocalizacionCV);
             tvFraseCV = (TextView) itemView.findViewById(R.id.tvFraseCV);
         }
+
+
     }
 }

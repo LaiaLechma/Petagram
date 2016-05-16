@@ -11,14 +11,16 @@ public class Detalle {
     private String localizacion;
     private String frase;
     private int foto;
+    private int ranting;
 
-    public Detalle(int foto, String nombre, String tipo, String raza, String localizacion, String frase) {
+    public Detalle(int foto, String nombre, String tipo, String raza, String localizacion, String frase, int ranting) {
         this.foto = foto;
         this.nombre = nombre;
         this.tipo = tipo;
         this.raza = raza;
         this.localizacion = localizacion;
         this.frase = frase;
+        this.ranting = ranting;
     }
 
     public int getFoto() {
@@ -67,5 +69,13 @@ public class Detalle {
 
     public void setFrase(String frase) {
         this.frase = frase;
+    }
+
+    public int getRanting() {
+        return ranting;
+    }
+
+    public void setRanting(int ranting) {
+        this.ranting = ranting;
     }
 }
