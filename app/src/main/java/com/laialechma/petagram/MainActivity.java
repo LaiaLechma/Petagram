@@ -38,12 +38,10 @@ public class MainActivity extends AppCompatActivity {
             inicializarAdaptador();
     }
 
-
     public void inicializarAdaptador(){
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
         listMascotas.setAdapter(adaptador);
     }
-
 
     public void inicializarListMascotas(){
         mascotas = new ArrayList<Detalle>();
