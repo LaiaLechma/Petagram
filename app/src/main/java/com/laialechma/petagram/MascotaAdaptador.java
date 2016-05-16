@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * Created by Laia Lechma on 15/05/2016.
  */
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
+
     ArrayList<Detalle> mascotas;
 
     public MascotaAdaptador (ArrayList<Detalle> mascotas){
@@ -28,18 +29,19 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder MascotaViewHolder, int position) {
+    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) {
         Detalle mascota = mascotas.get(position);
-        MascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
-        MascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
-        MascotaViewHolder.tvTipoCV.setText(mascota.getTipo());
-        MascotaViewHolder.tvRazaCV.setText(mascota.getRaza());
-        MascotaViewHolder.tvLocalizacionCV.setText(mascota.getLocalizacion());
-        MascotaViewHolder.tvFraseCV.setText(mascota.getFrase());
+        mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
+        mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
+        mascotaViewHolder.tvTipoCV.setText(mascota.getTipo());
+        mascotaViewHolder.tvRazaCV.setText(mascota.getRaza());
+        mascotaViewHolder.tvLocalizacionCV.setText(mascota.getLocalizacion());
+        mascotaViewHolder.tvFraseCV.setText(mascota.getFrase());
     }
 
     @Override
     public int getItemCount() {
+
         return mascotas.size();
     }
 

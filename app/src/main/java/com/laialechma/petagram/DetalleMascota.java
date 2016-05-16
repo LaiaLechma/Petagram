@@ -2,6 +2,7 @@ package com.laialechma.petagram;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 public class DetalleMascota extends AppCompatActivity {
@@ -10,6 +11,9 @@ public class DetalleMascota extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_mascota);
+
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
+        setSupportActionBar(miActionBar);
 
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString("Nombre");
