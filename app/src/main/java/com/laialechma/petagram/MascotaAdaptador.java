@@ -29,14 +29,28 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) {
-        Detalle mascota = mascotas.get(position);
-        mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
+    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int i) {
+        final Detalle mascota = mascotas.get(i);
+        //mascotaViewHolder.imgfotoCV.setImageResource(mascota.getFoto());
         mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvTipoCV.setText(mascota.getTipo());
         mascotaViewHolder.tvRazaCV.setText(mascota.getRaza());
         mascotaViewHolder.tvLocalizacionCV.setText(mascota.getLocalizacion());
         mascotaViewHolder.tvFraseCV.setText(mascota.getFrase());
+
+        mascotaViewHolder.iconoHuesoBlanco.setTag(mascotaViewHolder);
+
+        if (mascota.getRanting() == 0)
+            mascotaViewHolder.iconoHuesoBlanco.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MascotaViewHolder mascotaViewHolderHueso = (MascotaViewHolder) v.getTag();
+                    mascotaViewHolderHueso.ranting.setText(String.valueOf(1 + Integer.parseInt(mascotaViewHolderHueso.ranting.getText().toString())));
+
+                }
+            });
+
+
     }
 
     @Override
@@ -47,21 +61,25 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView imgFoto;
-        private TextView tvNombreCV;
-        private TextView tvTipoCV;
-        private TextView tvRazaCV;
-        private TextView tvLocalizacionCV;
-        private TextView tvFraseCV;
+        ImageView imgfotoCV;
+        TextView tvNombreCV;
+        TextView tvTipoCV;
+        TextView tvRazaCV;
+        TextView tvLocalizacionCV;
+        TextView tvFraseCV;
+        TextView ranting;
+        ImageView iconoHuesoBlanco;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgfoto);
+            imgfotoCV = (ImageView) itemView.findViewById(R.id.imgfotoCV);
             tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvTipoCV = (TextView) itemView.findViewById(R.id.tvTipoCV);
             tvRazaCV = (TextView) itemView.findViewById(R.id.tvRazaCV);
             tvLocalizacionCV = (TextView) itemView.findViewById(R.id.tvLocalizacionCV);
             tvFraseCV = (TextView) itemView.findViewById(R.id.tvFraseCV);
+            ranting = (TextView) itemView.findViewById(R.id.ranting);
+            iconoHuesoBlanco = (ImageView) itemView.findViewById(R.id.iconoHuesoBlanco);
         }
 
 
