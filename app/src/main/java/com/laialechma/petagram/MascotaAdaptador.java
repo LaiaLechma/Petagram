@@ -15,9 +15,36 @@ import java.util.ArrayList;
  */
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
 
+    public static class MascotaViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView imgfotoCV;
+        TextView tvNombreCV;
+        TextView tvTipoCV;
+        TextView tvRazaCV;
+        TextView tvLocalizacionCV;
+        TextView tvFraseCV;
+        TextView ranting;
+        ImageView iconoHuesoBlanco;
+
+        public MascotaViewHolder(View itemView) {
+            super(itemView);
+            imgfotoCV = (ImageView) itemView.findViewById(R.id.imgfotoCV);
+            tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
+            tvTipoCV = (TextView) itemView.findViewById(R.id.tvTipoCV);
+            tvRazaCV = (TextView) itemView.findViewById(R.id.tvRazaCV);
+            tvLocalizacionCV = (TextView) itemView.findViewById(R.id.tvLocalizacionCV);
+            tvFraseCV = (TextView) itemView.findViewById(R.id.tvFraseCV);
+            ranting = (TextView) itemView.findViewById(R.id.ranting);
+            iconoHuesoBlanco = (ImageView) itemView.findViewById(R.id.iconoHuesoBlanco);
+        }
+
+
+    }
+
+
     ArrayList<Detalle> mascotas;
 
-    public MascotaAdaptador (ArrayList<Detalle> mascotas){
+    MascotaAdaptador (ArrayList<Detalle> mascotas){
         this.mascotas = mascotas;
     }
 
@@ -31,7 +58,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     @Override
     public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int i) {
         final Detalle mascota = mascotas.get(i);
-        //mascotaViewHolder.imgfotoCV.setImageResource(mascota.getFoto());
+        mascotaViewHolder.imgfotoCV.setImageResource(mascota.getFoto());
         mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvTipoCV.setText(mascota.getTipo());
         mascotaViewHolder.tvRazaCV.setText(mascota.getRaza());
@@ -59,29 +86,5 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         return mascotas.size();
     }
 
-    public static class MascotaViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgfotoCV;
-        TextView tvNombreCV;
-        TextView tvTipoCV;
-        TextView tvRazaCV;
-        TextView tvLocalizacionCV;
-        TextView tvFraseCV;
-        TextView ranting;
-        ImageView iconoHuesoBlanco;
-
-        public MascotaViewHolder(View itemView) {
-            super(itemView);
-            imgfotoCV = (ImageView) itemView.findViewById(R.id.imgfotoCV);
-            tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
-            tvTipoCV = (TextView) itemView.findViewById(R.id.tvTipoCV);
-            tvRazaCV = (TextView) itemView.findViewById(R.id.tvRazaCV);
-            tvLocalizacionCV = (TextView) itemView.findViewById(R.id.tvLocalizacionCV);
-            tvFraseCV = (TextView) itemView.findViewById(R.id.tvFraseCV);
-            ranting = (TextView) itemView.findViewById(R.id.ranting);
-            iconoHuesoBlanco = (ImageView) itemView.findViewById(R.id.iconoHuesoBlanco);
-        }
-
-
-    }
 }

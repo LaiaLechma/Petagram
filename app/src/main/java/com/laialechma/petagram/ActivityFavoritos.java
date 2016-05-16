@@ -35,6 +35,10 @@ public class ActivityFavoritos extends AppCompatActivity {
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listMascotas.setClickable(false);
+        listMascotas.setEnabled(false);
+        listMascotas.setLayoutFrozen(true);
+        listMascotas.setItemAnimator(new DefaultItemAnimator());
 
         listMascotas.setLayoutManager(llm);
         inicializarListMascotas();
@@ -48,12 +52,12 @@ public class ActivityFavoritos extends AppCompatActivity {
 
     public void inicializarListMascotas(){
         mascotas = new ArrayList<Detalle>();
-        mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Tipo: Perro", "Raza: Labrador", "Localización: Cataratas del Paraíso", "Frase favorita: Acabo de conocerte y ya te quiero", 0));
-        mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Tipo: Roedor", "Raza: Rata", "Localización: Paris", "Frase favorita: Juntos podemos convertirnos en el mejor chef de París", 0));
-        mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Tipo: Perro", "Raza: Juguete", "Localización: USA", "Frase favorita: Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio", 0));
-        mascotas.add (new Detalle(R.drawable.perrobolt, "Bolt", "Tipo: Perro", "Raza: Pastor blanco Suizo o Shiba inu", "Localización: Hollywood", "Frase favorita: ¡Tengo un superladrido!", 0));
-        mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Tipo: Gato", "Raza: Labrador", "Localización: Muy, muy Lejano", "Frase favorita: ¿Quién oza importunarme?", 0));
-        mascotas.add (new Detalle(R.drawable.gatoshrek, "Sven", "Tipo: Reno", "Raza: Reno", "Localización: Arendelle", "Frase favorita: ??",0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Tipo: Gato", "Raza: no raza", "Localización: Muy, muy Lejano", "Frase favorita: ¿Quién oza importunarme?", 10));
+        mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Tipo: Perro", "Raza: Juguete", "Localización: USA", "Frase favorita: Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio", 3));
+        mascotas.add (new Detalle(R.drawable.sven, "Sven", "Tipo: Reno", "Raza: Reno", "Localización: Arendelle", "Frase favorita: ??",2));
+        mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Tipo: Perro", "Raza: Labrador", "Localización: Cataratas del Paraíso", "Frase favorita: Acabo de conocerte y ya te quiero", 7));
+        mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Tipo: Roedor", "Raza: Rata", "Localización: Paris", "Frase favorita: Juntos podemos convertirnos en el mejor chef de París", 5));
+
     }
     public void iraFavoritos(View v){
         Intent intent= new Intent(this,ActivityFavoritos.class);

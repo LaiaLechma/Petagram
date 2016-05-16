@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/ranting"
-                    android:text="5"
+                    android:text="10"
                     android:textSize="20sp"
                     android:layout_alignTop="@+id/iconoHuesoAmarillo"
                     android:layout_toLeftOf="@+id/iconoHuesoAmarillo"
