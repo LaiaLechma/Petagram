@@ -28,6 +28,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".ActivityAbout" />
+        <activity android:name=".ActivityContacta"></activity>
     </application>
 
 </manifest>
