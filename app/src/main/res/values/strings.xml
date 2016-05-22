@@ -3,6 +3,20 @@
     <string name="titulo_app">Petagram</string>
     <string name="bienvenida_app">Bienvenido a Petagram</string>
     <string name="boton_bienvenida_app">Accede</string>
-    <string name="menu_about">Acerca</string>
-    <string name="menu_contacta">Contacta</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_contacta">Contacto</string>
+
+    <string name="texto_boton_guardar">Siguiente</string>
+    <string name="name">Nombre:</string>
+    <string name="mail">Mail:</string>
+    <string name="descripcion">Mensaje:</string>
+
+    <string name="pname">Nombre</string>
+    <string name="ptelefono">Telefono</string>
+    <string name="pmail">Mail</string>
+    <string name="pfecha">Fecha</string>
+    <string name="pdescripcion">Mensaje</string>
+    <string name="texto_boton_modificar">Editar datos</string>
+    <string name="confirmar">Confirmar datos y Enviar</string>
+    <string name="texto_boton_mail">Enviar mail</string>
 </resources>

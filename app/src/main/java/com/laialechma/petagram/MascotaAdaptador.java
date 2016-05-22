@@ -1,6 +1,5 @@
 package com.laialechma.petagram;
 
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Laia Lechma on 15/05/2016.
+ * Created by Laia Lechma on 20/05/2016.
  */
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
 

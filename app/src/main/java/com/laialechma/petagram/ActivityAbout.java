@@ -3,6 +3,8 @@ package com.laialechma.petagram;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.laialechma.petagram.R;
+
 public class ActivityAbout extends AppCompatActivity {
 
     @Override

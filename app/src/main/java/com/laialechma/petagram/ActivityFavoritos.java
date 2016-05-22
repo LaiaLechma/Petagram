@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -46,7 +45,7 @@ public class ActivityFavoritos extends AppCompatActivity {
     }
 
     public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
+        ActivityContacta.MascotaAdaptador adaptador = new ActivityContacta.MascotaAdaptador(mascotas);
         listMascotas.setAdapter(adaptador);
     }
 
