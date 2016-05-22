@@ -18,5 +18,5 @@
     <string name="pdescripcion">Mensaje</string>
     <string name="texto_boton_modificar">Editar datos</string>
     <string name="confirmar">Confirmar datos y Enviar</string>
-    <string name="texto_boton_mail">Enviar mail</string>
+    <string name="texto_boton_mail">Confirmar y Enviar mail</string>
 </resources>

@@ -9,10 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ActivityContacto">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,7 +56,7 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
+            <!--<Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -68,10 +64,18 @@
                 android:id="@+id/botonGuardar"
                 android:text="@string/texto_boton_guardar"
                 android:theme="@style/botones"
-                android:onClick="onClick"/>
+                android:onClick="onClick"/>-->
 
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/botonEnviarMail"
+                android:text="@string/texto_boton_mail"
+                android:theme="@style/botones"
+                />
 
         </LinearLayout>
-    </ScrollView>
+
 </android.support.design.widget.CoordinatorLayout>

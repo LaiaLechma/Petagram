@@ -4,12 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item
-        android:id="@+id/mFavoritos"
-        android:title="Favoritos"
-        android:icon="@drawable/star"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
+
     <item
         android:id="@+id/mAbout"
         android:orderInCategory="101"
