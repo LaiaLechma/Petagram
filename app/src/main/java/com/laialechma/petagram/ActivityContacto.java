@@ -29,49 +29,41 @@ public class ActivityContacto extends AppCompatActivity {
 
 
 
-            agregarname = (TextInputEditText) findViewById(R.id.txtname);
-            String name = agregarname.getText().toString();
+        agregarname = (TextInputEditText) findViewById(R.id.txtname);
+        String name = agregarname.getText().toString();
 
 
-            agregardescripcion = (TextInputEditText) findViewById(R.id.txtdescripcion);
-            String descripcion = agregardescripcion.getText().toString();
+        agregardescripcion = (TextInputEditText) findViewById(R.id.txtdescripcion);
+        String descripcion = agregardescripcion.getText().toString();
 
-            agregarmaill= (TextInputEditText) findViewById(R.id.txtmail);
-            String email = agregarmaill.getText().toString();
-
-
-
-            Bundle parametros = getIntent().getExtras();
-            if(parametros != null) {
-                agregarname.setText(parametros.getString("Nombre"));
-                agregardescripcion.setText(parametros.getString("Descripcion"));
-                agregarmaill.setText(parametros.getString("Mail"));
-            }
+        agregarmaill= (TextInputEditText) findViewById(R.id.txtmail);
+        String email = agregarmaill.getText().toString();
 
 
-            Button botonGuardar = (Button) findViewById(R.id.botonGuardar);
-            botonGuardar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(ActivityContacto.this,PantallaResultadosContacto.class);
 
-                    intent.putExtra(getResources().getString(R.string.pname), agregarname.getText().toString());
-                    intent.putExtra(getResources().getString(R.string.pmail), agregarmaill.getText().toString());
-                    intent.putExtra(getResources().getString(R.string.pdescripcion), agregardescripcion.getText().toString());
-
-                    startActivity(intent);
-                }
-
-
-            });
-
+        Bundle parametros = getIntent().getExtras();
+        if(parametros != null) {
+            agregarname.setText(parametros.getString("Nombre"));
+            agregardescripcion.setText(parametros.getString("Descripcion"));
+            agregarmaill.setText(parametros.getString("Mail"));
         }
 
 
+        Button botonGuardar = (Button) findViewById(R.id.botonGuardar);
+        botonGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityContacto.this,PantallaResultadosContacto.class);
+
+                intent.putExtra(getResources().getString(R.string.pname), agregarname.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pmail), agregarmaill.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pdescripcion), agregardescripcion.getText().toString());
+
+                startActivity(intent);
+            }
 
 
+        });
 
     }
-
-
-
+}

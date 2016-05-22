@@ -49,6 +49,7 @@ public class FragmentRecyclerView extends Fragment {
         return v;
     }
     public ActivityContacta.MascotaAdaptador adaptador;
+
     public void inicializarAdaptador(){
         ActivityContacta.MascotaAdaptador adaptador = new ActivityContacta.MascotaAdaptador(mascotas);
         listMascotas.setAdapter(adaptador);

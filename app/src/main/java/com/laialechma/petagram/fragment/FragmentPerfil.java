@@ -3,7 +3,7 @@ package com.laialechma.petagram.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -24,6 +24,9 @@ public class FragmentPerfil extends Fragment {
     ArrayList<Detalle> mascotas;
     RecyclerView listMascotas;
     Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     public FragmentPerfil() {
         // Required empty public constructor
@@ -34,11 +37,18 @@ public class FragmentPerfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false);
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-        listMascotas.setLayoutManager(llm);
+
+        listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
+
+        GridLayoutManager glm = new GridLayoutManager(getActivity(),3);
+
+
+        /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
+
+        listMascotas.setLayoutManager(glm);
         inicializarListMascotas();
         inicializarAdaptador();
 
@@ -52,12 +62,9 @@ public class FragmentPerfil extends Fragment {
 
     public void inicializarListMascotas(){
         mascotas = new ArrayList<Detalle>();
-        mascotas.add (new Detalle(R.drawable.perroup, "Dug", "Tipo: Perro", "Raza: Labrador", "Localización: Cataratas del Paraíso", "Frase favorita: Acabo de conocerte y ya te quiero", 0));
-        mascotas.add (new Detalle(R.drawable.rataratatouille, "Remy", "Tipo: Roedor", "Raza: Rata", "Localización: Paris", "Frase favorita: Juntos podemos convertirnos en el mejor chef de París", 0));
-        mascotas.add (new Detalle(R.drawable.perrotoystory, "Slinky", "Tipo: Perro", "Raza: Juguete", "Localización: USA", "Frase favorita: Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio", 0));
-        mascotas.add (new Detalle(R.drawable.perrobolt, "Bolt", "Tipo: Perro", "Raza: Pastor blanco Suizo o Shiba inu", "Localización: Hollywood", "Frase favorita: ¡Tengo un superladrido!", 0));
-        mascotas.add (new Detalle(R.drawable.gatoshrek, "Gato con Botas", "Tipo: Gato", "Raza: no Raza", "Localización: Muy, muy Lejano", "Frase favorita: ¿Quién oza importunarme?", 0));
-        mascotas.add (new Detalle(R.drawable.sven, "Sven", "Tipo: Reno", "Raza: Reno", "Localización: Arendelle", "Frase favorita: ??",0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek1,"","","","","", 0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek2,"","","","","", 0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek3,"","","","","", 0));
     }
 
 }

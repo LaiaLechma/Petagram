@@ -29,9 +29,10 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".ActivityAbout" />
+        <activity android:name=".PantallaResultadosContacto" />
+        <activity android:name=".PerfilAdaptador" />
         <activity android:name=".ActivityContacta" />
-        <activity android:name=".ActivityContacto" />
-        <activity android:name=".PantallaResultadosContacto"></activity>
+        <activity android:name=".ActivityContacto"></activity>
     </application>
 
 </manifest>
