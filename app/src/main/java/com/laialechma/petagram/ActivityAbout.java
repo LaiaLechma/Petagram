@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.laialechma.petagram.R;
 
 public class ActivityAbout extends AppCompatActivity {
-    ImageView star;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +18,9 @@ public class ActivityAbout extends AppCompatActivity {
 
         Toolbar miActionBar= (Toolbar)findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
-
-        star =((ImageView)findViewById(R.id.star));
-        star.setVisibility(View.INVISIBLE);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
     public void iraFavoritos(View v){
         Intent intent= new Intent(this,MainActivity.class);

@@ -59,7 +59,7 @@ public class ActivityFavoritos extends AppCompatActivity {
 
     }
     public void iraFavoritos(View v){
-        Intent intent= new Intent(this,ActivityFavoritos.class);
+        Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }

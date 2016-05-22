@@ -22,17 +22,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <activity android:name=".ActivityFavoritos">
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".ActivityAbout" />
-        <activity android:name=".PantallaResultadosContacto" />
-        <activity android:name=".PerfilAdaptador" />
-        <activity android:name=".ActivityContacta" />
-        <activity android:name=".ActivityContacto"></activity>
+
+        <activity android:name=".ActivityAbout" >
+            android:parentActivityName=".MainActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".ActivityContacto">
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".PantallaResultadosContacto" ></activity>
+        <activity android:name=".ActivityContacta" >        </activity>
     </application>
 
 </manifest>

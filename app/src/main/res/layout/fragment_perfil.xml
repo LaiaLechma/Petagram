@@ -11,6 +11,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/civPerfil"
+            android:layout_width="@dimen/circular_thumbnail_image_width"
+            android:layout_height="@dimen/circular_thumbnail_image_height"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/layout_vertical_margin"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="@dimen/circular_image_border_width"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="10"
+            app:civ_shadow_color="@color/colorDivider" />
 
         <TextView
             android:id="@+id/tvNombrePerfil"

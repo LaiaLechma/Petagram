@@ -3,25 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".ActivityAbout">
 
-    <include android:id="@+id/miActionBar"
-        layout="@layout/actionbar">
-    </include>
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Contacto"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp"
-        android:layout_below="@+id/miActionBar"/>
+        android:orientation="vertical">
+
+        <include android:id="@+id/miActionBar"
+            layout="@layout/actionbar">
+        </include>
+
+        <TextView
+            android:id="@+id/tvNombreDesarrollador"
+            android:text="@string/developer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:id="@+id/tvBiografiaDesarrollador"
+            android:text="@string/developer_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+    </LinearLayout>
+
 </RelativeLayout>

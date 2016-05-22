@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.laialechma.petagram.ActivityContacta;
 import com.laialechma.petagram.Detalle;
@@ -39,6 +40,11 @@ public class FragmentPerfil extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
+        TextView tvNombre = (TextView) view.findViewById(R.id.tvNombrePerfil);
+        tvNombre.setText(mascota.getNombre());
+
+        CircularImageView civPerfil = (CircularImageView) view.findViewById(R.id.civPerfil);
+        civPerfil.setImageResource(mascota.getFoto());
 
         listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
 

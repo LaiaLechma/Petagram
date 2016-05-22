@@ -19,4 +19,7 @@
     <string name="texto_boton_modificar">Editar datos</string>
     <string name="confirmar">Confirmar datos y Enviar</string>
     <string name="texto_boton_mail">Confirmar y Enviar mail</string>
+
+    <string name="developer_name">Laia Lechma</string>
+    <string name="developer_bio">Lorem ipsum dolor sit amet, consectetur</string>
 </resources>
