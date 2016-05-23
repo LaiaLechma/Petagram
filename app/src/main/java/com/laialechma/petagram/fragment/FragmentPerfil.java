@@ -30,7 +30,11 @@ public class FragmentPerfil extends Fragment {
 
     ArrayList<Detalle> mascotas;
     RecyclerView listMascotas;
-    CircularImageView civPerfil;
+    Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    ImageView star;
 
     public FragmentPerfil() {
         // Required empty public constructor
@@ -44,7 +48,11 @@ public class FragmentPerfil extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-    
+
+                /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
+
+
         listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
         listMascotas.setClickable(false);
         listMascotas.setEnabled(false);
@@ -76,10 +84,3 @@ public class FragmentPerfil extends Fragment {
     }
 
 }
-
-
-        /*TextView tvNombre = (TextView) view.findViewById(R.id.tvNombrePerfil);
-        tvNombre.setText(mascota.getNombre());
-
-        CircularImageView civPerfil = (CircularImageView) view.findViewById(R.id.civPerfil);
-        civPerfil.setImageResource(mascota.getFoto());*/
