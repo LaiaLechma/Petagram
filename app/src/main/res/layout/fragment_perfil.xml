@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laialechma.petagram.fragment.FragmentRecyclerView">
+    tools:context="com.laialechma.petagram.fragment.FragmentPerfil">
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <com.mikhaellopez.circularimageview.CircularImageView
@@ -36,18 +42,15 @@
             android:textStyle="bold"
             android:layout_below="@+id/civPerfil"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
 
         <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rvPerfil"
-            android:layout_below="@+id/tvRvfNombrePerfil"/>
+            android:id="@+id/rvPerfil" />
 
 
     </LinearLayout>
-
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

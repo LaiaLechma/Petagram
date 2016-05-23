@@ -47,12 +47,12 @@ public class FragmentPerfil extends Fragment {
 
         civPerfil = (CircularImageView) v.findViewById(R.id.civPerfil);
 
-        tvNombre = (TextView) v.findViewById(R.id.tvRvfNombrePerfil);
+        tvNombre = (TextView) v.findViewById(R.id.tvNombrePerfil);
 
         /*tvNombre.setText("Gato con Botas");
         ttvNombre.setTextSize(20);
 
-       
+        CircularImageView civPerfil = (CircularImageView) v.findViewById(R.id.civPerfil);
         civPerfil.setImageResource(R.drawable.gatoshrek);
 
 
