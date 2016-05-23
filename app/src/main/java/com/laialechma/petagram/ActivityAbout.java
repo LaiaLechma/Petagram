@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.laialechma.petagram.R;
 
 public class ActivityAbout extends AppCompatActivity {
+    ImageView star;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,10 @@ public class ActivityAbout extends AppCompatActivity {
 
         Toolbar miActionBar= (Toolbar)findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        star =((ImageView)findViewById(R.id.star));
+        star.setVisibility(View.INVISIBLE);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 

@@ -3,19 +3,25 @@ package com.laialechma.petagram.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.laialechma.petagram.ActivityContacta;
 import com.laialechma.petagram.Detalle;
 import com.laialechma.petagram.R;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,10 +30,7 @@ public class FragmentPerfil extends Fragment {
 
     ArrayList<Detalle> mascotas;
     RecyclerView listMascotas;
-    Toolbar toolbar;
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    CircularImageView civPerfil;
 
     public FragmentPerfil() {
         // Required empty public constructor
@@ -37,19 +40,18 @@ public class FragmentPerfil extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-        TextView tvNombre = (TextView) view.findViewById(R.id.tvNombrePerfil);
-        tvNombre.setText(mascota.getNombre());
-
-        CircularImageView civPerfil = (CircularImageView) view.findViewById(R.id.civPerfil);
-        civPerfil.setImageResource(mascota.getFoto());
-
+    
         listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
+        listMascotas.setClickable(false);
+        listMascotas.setEnabled(false);
+        listMascotas.setLayoutFrozen(true);
+        listMascotas.setItemAnimator(new DefaultItemAnimator());
 
         GridLayoutManager glm = new GridLayoutManager(getActivity(),3);
-
 
         /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
@@ -68,9 +70,16 @@ public class FragmentPerfil extends Fragment {
 
     public void inicializarListMascotas(){
         mascotas = new ArrayList<Detalle>();
-        mascotas.add (new Detalle(R.drawable.gatoshrek1,"","","","","", 0));
-        mascotas.add (new Detalle(R.drawable.gatoshrek2,"","","","","", 0));
-        mascotas.add (new Detalle(R.drawable.gatoshrek3,"","","","","", 0));
+        mascotas.add (new Detalle(R.drawable.gatoshrek1,"","","","","", 20));
+        mascotas.add (new Detalle(R.drawable.gatoshrek2,"","","","","", 3));
+        mascotas.add (new Detalle(R.drawable.gatoshrek3,"","","","","", 5));
     }
 
 }
+
+
+        /*TextView tvNombre = (TextView) view.findViewById(R.id.tvNombrePerfil);
+        tvNombre.setText(mascota.getNombre());
+
+        CircularImageView civPerfil = (CircularImageView) view.findViewById(R.id.civPerfil);
+        civPerfil.setImageResource(mascota.getFoto());*/

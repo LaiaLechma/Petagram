@@ -6,19 +6,23 @@
     android:layout_height="match_parent"
     tools:context="com.laialechma.petagram.fragment.FragmentRecyclerView">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/civPerfil"
-            android:layout_width="@dimen/circular_thumbnail_image_width"
-            android:layout_height="@dimen/circular_thumbnail_image_height"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/layout_vertical_margin"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/gatoshrek"
             app:civ_border_color="@color/colorAccent"
-            app:civ_border_width="@dimen/circular_image_border_width"
+            app:civ_border_width="4dp"
             app:civ_shadow="true"
             app:civ_shadow_radius="10"
             app:civ_shadow_color="@color/colorDivider" />
@@ -28,17 +32,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textStyle="bold" />
+            android:text="Gato con Botas"
+            android:textStyle="bold"
+            android:layout_below="@+id/civPerfil"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rvPerfil"
-            android:layout_below="@+id/toolbar"/>
+            android:layout_below="@+id/tvNombrePerfil"/>
+
 
     </LinearLayout>
 

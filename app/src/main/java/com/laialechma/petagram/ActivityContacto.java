@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class ActivityContacto extends AppCompatActivity {
     TextInputEditText agregarname;
     TextInputEditText agregarmaill;
     TextInputEditText agregardescripcion;
+    ImageView star;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,10 @@ public class ActivityContacto extends AppCompatActivity {
 
         Toolbar miActionBar= (Toolbar)findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
+
+        star =((ImageView)findViewById(R.id.star));
+        star.setVisibility(View.INVISIBLE);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
