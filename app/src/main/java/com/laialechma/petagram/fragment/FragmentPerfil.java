@@ -30,11 +30,8 @@ public class FragmentPerfil extends Fragment {
 
     ArrayList<Detalle> mascotas;
     RecyclerView listMascotas;
-    Toolbar toolbar;
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    ImageView star;
+    CircularImageView civPerfil;
+    TextView tvNombre;
 
     public FragmentPerfil() {
         // Required empty public constructor
@@ -48,6 +45,16 @@ public class FragmentPerfil extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
+        civPerfil = (CircularImageView) v.findViewById(R.id.civPerfil);
+
+        tvNombre = (TextView) v.findViewById(R.id.tvRvfNombrePerfil);
+
+        /*tvNombre.setText("Gato con Botas");
+        ttvNombre.setTextSize(20);
+
+       
+        civPerfil.setImageResource(R.drawable.gatoshrek);
+
 
                 /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
@@ -60,9 +67,6 @@ public class FragmentPerfil extends Fragment {
         listMascotas.setItemAnimator(new DefaultItemAnimator());
 
         GridLayoutManager glm = new GridLayoutManager(getActivity(),3);
-
-        /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
 
         listMascotas.setLayoutManager(glm);
         inicializarListMascotas();
