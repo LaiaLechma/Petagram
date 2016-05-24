@@ -22,10 +22,8 @@
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/civPerfil"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="4dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:src="@drawable/gatoshrek"
             app:civ_border_color="@color/colorAccent"
             app:civ_border_width="4dp"

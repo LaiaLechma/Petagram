@@ -30,7 +30,7 @@ public class FragmentPerfil extends Fragment {
 
     ArrayList<Detalle> mascotas;
     RecyclerView listMascotas;
-    CircularImageView civPerfil;
+    CircularImageView circularImageView;
     TextView tvNombre;
 
     public FragmentPerfil() {
@@ -41,19 +41,13 @@ public class FragmentPerfil extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-        civPerfil = (CircularImageView) v.findViewById(R.id.civPerfil);
+        CircularImageView circularImageView = (CircularImageView)v.findViewById(R.id.civPerfil);
+
 
         tvNombre = (TextView) v.findViewById(R.id.tvNombrePerfil);
-
-        /*tvNombre.setText("Gato con Botas");
-        ttvNombre.setTextSize(20);
-
-        CircularImageView civPerfil = (CircularImageView) v.findViewById(R.id.civPerfil);
-        civPerfil.setImageResource(R.drawable.gatoshrek);
 
 
                 /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
