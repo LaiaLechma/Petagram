@@ -42,19 +42,17 @@ public class FragmentPerfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =  inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        View v =  inflater.inflate(R.layout.fragment_perfil, container, false);
 
         //CircularImageView circularImageView = (CircularImageView)v.findViewById(R.id.civPerfil);
-
-
        // tvNombre = (TextView) v.findViewById(R.id.tvNombrePerfil);
 
 
-                /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);*/
 
 
-        listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
+        listMascotas = (RecyclerView) v.findViewById(R.id.rvMascotasperfil);
         listMascotas.setClickable(false);
         listMascotas.setEnabled(false);
         listMascotas.setLayoutFrozen(true);
