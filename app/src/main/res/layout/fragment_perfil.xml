@@ -18,7 +18,7 @@
             android:id="@+id/civPerfil"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@drawable/gatoshrek1"
+            android:src="@drawable/gatoshrek3"
             app:civ_border_color="@color/colorAccent"
             app:civ_border_width="4dp"
             app:civ_shadow="true"

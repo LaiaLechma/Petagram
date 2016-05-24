@@ -44,8 +44,6 @@ public class FragmentPerfil extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_perfil, container, false);
 
-        //CircularImageView circularImageView = (CircularImageView)v.findViewById(R.id.civPerfil);
-       // tvNombre = (TextView) v.findViewById(R.id.tvNombrePerfil);
 
 
         /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
