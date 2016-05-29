@@ -37,12 +37,51 @@ public class ConstructorMascotas {
     public void insertarMascotas (BaseDatos db){
         ContentValues contentValues = new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Dug");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Remy");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Slinky");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Bolt");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Gato con Botas");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.sven);
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Perro");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: Labrador");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Cataratas del Paraíso");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: Acabo de conocerte y ya te quiero");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.perroup);
+        db.insertarMascota(contentValues);
 
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Remy");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Roedor");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: Rata");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Localización: Paris");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: Juntos podemos convertirnos en el mejor chef de París");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.rataratatouille);
+        db.insertarMascota(contentValues);
+
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Slinky");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Perro");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: Juguete");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Localización: USA");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: Tal vez yo no sea muy listo Buzz, pero se lo que es un suicidio");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.perrotoystory);
+        db.insertarMascota(contentValues);
+
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Bolt");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Perro");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: Pastor blanco Suizo o Shiba inu");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Localización: Hoollywood");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: ¡Tengo un superladrido!");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.perrobolt);
+        db.insertarMascota(contentValues);
+
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Gato con Botas");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Gato");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: no raza");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Localización: Muy, muy Lejano");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: ¿Quién oza importunarme?");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.gatoshrek);
+        db.insertarMascota(contentValues);
+
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE, "Sven");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_TIPO, "Tipo: Reno");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_RAZA, "Raza: Reno");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_LOCALIZACIÓN, "Localización: Arendelle");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FRASE, "Frase favorita: ??");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTAS_FOTO, R.drawable.sven);
         db.insertarMascota(contentValues);
     }
 

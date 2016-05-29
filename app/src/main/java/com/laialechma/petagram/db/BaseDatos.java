@@ -48,8 +48,8 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST" + ConstantesBaseDatos.TABLE_MASCOTAS);
-        db.execSQL("DROP TABLE IF EXIST" + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS);
+        db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.TABLE_MASCOTAS);
+        db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS);
         onCreate(db);
     }
 
@@ -57,7 +57,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         ArrayList <Detalle> mascota = new ArrayList<>();
 
 
-        String query = "SELECT * FROM" + ConstantesBaseDatos.TABLE_MASCOTAS;
+        String query = "SELECT * FROM " + ConstantesBaseDatos.TABLE_MASCOTAS;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
@@ -101,7 +101,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.insert(ConstantesBaseDatos.TABLE_LIKES_MASCOTAS, null, contentValues);
         db.close();
     }
-
 
     public int obtenerRantingMascota (Detalle mascota){
         int ranting = 0;

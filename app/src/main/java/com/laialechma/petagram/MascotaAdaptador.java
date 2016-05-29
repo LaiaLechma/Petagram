@@ -1,6 +1,7 @@
 package com.laialechma.petagram;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,9 +45,25 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         mascotaViewHolder.tvLocalizacionCV.setText(mascota.getLocalizacion());
         mascotaViewHolder.tvFraseCV.setText(mascota.getFrase());
         mascotaViewHolder.ranting.setText(String.valueOf(mascota.getRanting()) + " " + activity.getString(R.string.plikes));
-        mascotaViewHolder.iconoHuesoBlanco.setTag(mascotaViewHolder);
+
+
+        mascotaViewHolder.imgfotoCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, mascota.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity, DetalleMascota.class);
+                intent.putExtra("Nombre", mascota.getNombre());
+                intent.putExtra("Tipo", mascota.getTipo());
+                intent.putExtra("Raza", mascota.getRaza());
+                intent.putExtra("Localizacion", mascota.getLocalizacion());
+                intent.putExtra("Frase", mascota.getFrase());
+                activity.startActivity(intent);
+
+            }
+        });
 
         /*
+         mascotaViewHolder.iconoHuesoBlanco.setTag(mascotaViewHolder);
             mascotaViewHolder.iconoHuesoBlanco.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
