@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.laialechma.petagram.fragment.FragmentPerfil;
 import com.laialechma.petagram.fragment.FragmentRecyclerView;
+import com.laialechma.petagram.pojo.Detalle;
 
 import java.util.ArrayList;
 
@@ -97,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
             listMascotas.setLayoutManager(llm);
             inicializarListMascotas();
             inicializarAdaptador();
-         */
 
-            /*
             ArrayList<String> nombresDetalleMascotas = new ArrayList<>();
             for (Detalle detallesMascotas : mascotas) {
                 nombresDetalleMascotas.add(detallesMascotas.getNombre());

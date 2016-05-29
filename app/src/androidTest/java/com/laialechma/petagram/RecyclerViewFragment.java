@@ -15,7 +15,7 @@ public class RecyclerViewFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.fragment_reycleview, container, false);
+        View v = inflater.inflate(R.layout.fragment_recyclerview, container, false);
         return v;
     }
 }

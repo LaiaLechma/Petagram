@@ -1,4 +1,4 @@
-package com.laialechma.petagram;
+package com.laialechma.petagram.pojo;
 
 /**
  * Created by Laia Lechma on 15/05/2016.
@@ -6,6 +6,7 @@ package com.laialechma.petagram;
 public class Detalle {
 
     private String nombre;
+    private int id;
     private String tipo;
     private String raza;
     private String localizacion;
@@ -21,6 +22,18 @@ public class Detalle {
         this.localizacion = localizacion;
         this.frase = frase;
         this.ranting = ranting;
+    }
+
+    public Detalle() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getFoto() {

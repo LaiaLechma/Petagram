@@ -42,8 +42,10 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
                     android:id="@+id/iconoHuesoBlanco"
                     android:src="@drawable/huesoblanco"
+
                  />
 
                 <TextView
@@ -54,27 +56,17 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/iconoHuesoBlanco"
                     android:layout_centerHorizontal="true" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iconoHuesoAmarillo"
-                    android:src="@drawable/huesoamarillo"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/ranting"
-                    android:text="10"
+                    android:text="@string/plikes"
                     android:textSize="20sp"
-                    android:layout_alignTop="@+id/iconoHuesoAmarillo"
-                    android:layout_toLeftOf="@+id/iconoHuesoAmarillo"
-                    android:layout_toStartOf="@+id/iconoHuesoAmarillo" />
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+ />
 
             </RelativeLayout>
 

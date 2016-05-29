@@ -9,8 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.laialechma.petagram.Detalle;
-import com.laialechma.petagram.R;
+import com.laialechma.petagram.pojo.Detalle;
 
 import java.util.ArrayList;
 

@@ -6,22 +6,17 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.laialechma.petagram.ActivityContacta;
-import com.laialechma.petagram.Detalle;
+import com.laialechma.petagram.pojo.Detalle;
 import com.laialechma.petagram.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,6 +39,8 @@ public class FragmentPerfil extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_perfil, container, false);
 
+        //CircularImageView circularImageView = (CircularImageView)v.findViewById(R.id.civPerfil);
+       // tvNombre = (TextView) v.findViewById(R.id.tvNombrePerfil);
 
 
         /* LinearLayoutManager llm = new LinearLayoutManager(getActivity());
